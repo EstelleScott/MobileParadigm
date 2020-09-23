@@ -1,0 +1,26 @@
+body{
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #DDDDDD;
+}
+.header{
+  background-color: #2079D0;
+  padding: 2%;
+  color: white;
+  text-align: center;
+  margin:auto;
+  font-size: 1.5em;
+}
+.record{
+  background-color: white;
+  color: black;
+  width: 90%;
+  display: block;
+  margin: 5% auto;
+  padding: 2%;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.record:hover{
+
+}
