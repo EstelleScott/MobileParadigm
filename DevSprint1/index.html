@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
     <title>ReceiptKeep | Home</title>
   </head>
   <body>
@@ -24,10 +25,13 @@
       Receipt 3<br>
       01/01/2020
     </a>
-    <button class="addButton">
+    <button class="addButton" onclick="openAddFrom()">
       +
     </button>
-    <div class="addFromContainer">
+    <div class="addFromContainer" id="addFromContainer">
+      <button class="hideButton" onclick="closeAddFrom()">
+        x
+      </button>
       <form>
         <button formaction="camera.html" class="addOptions">
           Take new photo
