@@ -63,6 +63,7 @@ html, body{
   display: block;
   margin: 2% auto;
   width: 90%;
+  height: 40px;
 }
 .hideButton{
   right: 5%;
@@ -70,7 +71,9 @@ html, body{
   display: block;
   margin:0;
 }
-
+#previewImg{
+  width:100%;
+}
 #camera, #cameraView, #cameraSensor, #picPreview{
   width: 100%;
   height:100%;
