@@ -9,7 +9,7 @@ function closeAddFrom(){
   container.style.display = "none";
 }
 
-// Write code to load video
+// code to load video
 navigator.mediaDevices.getUserMedia({video: true})
 .then(showVideo)
 .catch((err) => console.error(err));
@@ -22,3 +22,5 @@ function showVideo(media) {
   var video = document.querySelector('video');
   video.srcObject = media;
 }
+
+// code to capture photo

@@ -71,7 +71,7 @@ html, body{
   margin:0;
 }
 
-.video{
+#camera, #cameraView, #cameraSensor{
   width: 100%;
   height:100%;
   position: fixed;
@@ -84,15 +84,17 @@ html, body{
   width: 100%;
   padding: 20px;
   text-align: center;
+  margin:0;
 }
-.captureButton{
+#captureButton{
   background-color:white;
   border-radius: 100%;
   height: 60px;
   width:60px;
   display: block;
   margin:auto;
-}
+
+
 
 @media screen and (min-width:801px){
   .record{
