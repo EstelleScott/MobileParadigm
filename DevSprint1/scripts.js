@@ -36,3 +36,15 @@ function capturePic(){
   picPreview.src = cameraSensor.toDataURL("image/webp");
   picPreview.classList.add("picPreview");
 }
+
+//show div to customise new receipt record
+function showCreate(){
+  var container = document.getElementById("showCreate");
+  container.style.display = "block";
+  console.log("w");
+}
+//close details
+function closeDetails(){
+  var container = document.getElementById("showCreate");
+  container.style.display = "none";
+}
