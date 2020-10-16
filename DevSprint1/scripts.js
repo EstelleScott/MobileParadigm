@@ -9,7 +9,7 @@ function closeAddFrom(){
   container.style.display = "none";
 }
 
-//var constraints = { video: { facingMode: "environment" }, audio: false };
+var constraints = { video: { facingMode: "environment" }, audio: false };
 
 //set constants
 const cameraView = document.querySelector("#cameraView"),
