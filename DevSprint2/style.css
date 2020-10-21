@@ -48,6 +48,12 @@ html, body{
   transition: 0.1s ease-in-out;
 }
 
+input[type="file"]{
+    display: none;
+}
+.buttonText{
+  margin:10px;
+}
 .addFromContainer{
   background-color: #2079D0;
   padding-top: 2%;
@@ -64,6 +70,11 @@ html, body{
   margin: 2% auto;
   width: 90%;
   height: 40px;
+  text-decoration: none;
+  font: 1em Arial;
+  background-color: #EEEEEE;
+  color: #333333;
+  border: 1px solid #CCCCCC;
 }
 .buttonDiv{
   width:100%;

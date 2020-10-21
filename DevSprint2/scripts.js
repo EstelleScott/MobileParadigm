@@ -9,8 +9,6 @@ function closeAddFrom(){
   container.style.display = "none";
 }
 
-
-
 //set constants
 
 var constraints = { video: { facingMode: "environment" }, audio: false };
