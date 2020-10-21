@@ -23,15 +23,13 @@ picPreview = document.querySelector("picPreview")
 function cameraStart() {
     navigator.mediaDevices
         .getUserMedia(constraints)
-        .then(streamCam)
+        .then(function(media) {
+        track = media.getTracks()[0];
+        cameraView.srcObject = media;
+    })
     .catch(function(error) {
         console.error("Oops. Something is broken.", error);
     });
-}
-
-function streamCam(media) {
-track = media.getTracks()[0];
-cameraView.srcObject = media;
 }
 
 // Start the video stream when the window loads
