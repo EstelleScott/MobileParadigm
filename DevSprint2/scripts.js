@@ -23,9 +23,9 @@ picPreview = document.querySelector("picPreview")
 function cameraStart() {
     navigator.mediaDevices
         .getUserMedia(constraints)
-        .then(function(stream) {
-        track = stream.getTracks()[0];
-        cameraView.srcObject = stream;
+        .then(function(media) {
+        track = media.getTracks()[0];
+        cameraView.srcObject = media;
     })
     .catch(function(error) {
         console.error("Oops. Something is broken.", error);
