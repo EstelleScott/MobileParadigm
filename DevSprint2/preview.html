@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Preview photo</title>
+  </head>
+  <body>
+    <img src="RECEIPT.PNG" id="previewImg">
+    <div class="captureContainer">
+      <a href="camera.html" class="retake">Retake</a>
+      <button class="cont" onclick="showCreate()">Continue</button>
+    </div>
+    <div class="detailsContainer" id="showCreate">
+      <button onclick="closeDetails()" class="hideButton">x</button>
+      <label for="receiptName">Receipt name:</label>
+      <input type="text" class="customiseBox" id="receiptName"><br>
+      <label for="receiptDate">Receipt date:</label>
+      <input type="date" class="customiseBox" id="receiptName"><br>
+      <form>
+        <button formaction="receiptDetail.html">Finish</button>
+      </form>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

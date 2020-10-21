@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ReceiptKeep | Home</title>
+  </head>
+  <body>
+    <header>
+        <div class="header">
+          <b>ReceiptKeep</b>
+        </div>
+    </header>
+    <button class="addButton" onclick="openAddFrom()">
+      +
+    </button>
+    <div class="addFromContainer" id="addFromContainer">
+      <div class="buttonDiv">
+        <button class="hideButton" onclick="closeAddFrom()">
+          x
+        </button>
+      </div>
+      <form>
+        <button formaction="camera.html" class="addOptions">
+          Take new photo
+        </button>
+      </form>
+      <button class="addOptions">
+        Choose from camera roll
+      </button>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

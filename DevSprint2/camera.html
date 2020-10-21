@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Take new photo</title>
+  </head>
+  <body>
+    <main id="camera">
+      <canvas id="cameraSensor"></canvas>
+      <video autoplay playsinline id="cameraView"></video>
+      <img src="//:0" alt="" id="picPreview">
+      <div class="captureContainer">
+        <form>
+          <button formaction="preview.html" id="captureButton"></button> <!--onclick="capturePic()" -->
+        </form>
+      </div>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>
