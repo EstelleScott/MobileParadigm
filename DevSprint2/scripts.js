@@ -1,5 +1,5 @@
 // code to open the 'add pic from' div
-function openAddFrom(){
+/**function openAddFrom(){
   var container = document.getElementById("addFromContainer");
   container.style.display = "block";
 }
@@ -7,40 +7,45 @@ function openAddFrom(){
 function closeAddFrom(){
   var container = document.getElementById("addFromContainer");
   container.style.display = "none";
-}
+}**/
 
 
 
 //set constants
+
+var constraints = { video: { facingMode: "environment" }, audio: false };
+
 const cameraView = document.querySelector("#cameraView"),
 cameraSensor = document.querySelector("#cameraSensor"),
 captureButton = document.querySelector("#captureButton"),
 picPreview = document.querySelector("picPreview")
 
-var constraints = { video: { facingMode: "environment" }, audio: false };
-
-navigator.mediaDevices.getUserMedia({video: true})
-.then(showVideo)
-.catch((err) => console.error(err));
-
-//show camera feed
-function showVideo(media) {
-//  console.log('Show video', media);
-  track = media.getTracks()[0];
-  cameraView.srcObject = media;
+function cameraStart() {
+    navigator.mediaDevices
+        .getUserMedia(constraints)
+        .then(function(stream) {
+        track = stream.getTracks()[0];
+        cameraView.srcObject = stream;
+    })
+    .catch(function(error) {
+        console.error("Oops. Something is broken.", error);
+    });
 }
 
+// Start the video stream when the window loads
+window.addEventListener("load", cameraStart, false);
+
 // code to capture photo
-function capturePic(){
+/**function capturePic(){
   cameraSensor.width = cameraView.videoWidth;
   cameraSensor.height = cameraView.videoHeight;
   cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
   picPreview.src = cameraSensor.toDataURL("image/webp");
   picPreview.classList.add("picPreview");
-}
+}**/
 
 //show div to customise new receipt record
-function showCreate(){
+/**function showCreate(){
   var container = document.getElementById("showCreate");
   container.style.display = "block";
   console.log("w");
@@ -49,4 +54,4 @@ function showCreate(){
 function closeDetails(){
   var container = document.getElementById("showCreate");
   container.style.display = "none";
-}
+}**/
