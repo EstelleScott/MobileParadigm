@@ -9,6 +9,17 @@ function closeAddFrom(){
   container.style.display = "none";
 }
 
+//choose from camera roll
+document.querySelector("#choosePicture").addEventListener("change", function(){
+  const reader = new FileReader();
+
+  reader.addEventListener("load", () =>{
+    localStorage.setItem("recent-image", reader.result);
+  });
+
+  reader.readAsDataURL(this.files[0]);
+});
+
 //set constants
 
 var constraints = { video: { facingMode: "environment" }, audio: false };
