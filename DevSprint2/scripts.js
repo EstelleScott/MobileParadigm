@@ -14,7 +14,8 @@ document.querySelector("#choosePicture").addEventListener("change", function(){
   const reader = new FileReader();
 
   reader.addEventListener("load", () =>{
-    localStorage.setItem("recent-image", reader.result);
+    localStorage.setItem("recent-image1", reader.result);
+    window.location.href="preview.html";
   });
 
   reader.readAsDataURL(this.files[0]);
